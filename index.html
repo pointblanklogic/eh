@@ -4363,16 +4363,16 @@ var author$project$Main$UrlChanged = function (a) {
 var author$project$Main$UrlRequested = function (a) {
 	return {$: 'UrlRequested', a: a};
 };
-var author$project$Main$About = {$: 'About'};
 var author$project$Main$Model = F6(
 	function (currentPage, navKey, deal, input_form, new_participant, index_participant_to_delete) {
 		return {currentPage: currentPage, deal: deal, index_participant_to_delete: index_participant_to_delete, input_form: input_form, navKey: navKey, new_participant: new_participant};
 	});
+var author$project$Main$Negotiation = {$: 'Negotiation'};
 var author$project$Main$Programmer = {$: 'Programmer'};
-var author$project$Main$p1 = {investedAmount: 0, name: 'P1', role: author$project$Main$Programmer, salary: 20000, shares: 1000};
+var author$project$Main$p1 = {investedAmount: 0, name: 'Peter', role: author$project$Main$Programmer, salary: 20000, shares: 1000};
 var author$project$Main$Investor = {$: 'Investor'};
-var author$project$Main$p2 = {investedAmount: 150000, name: 'P2', role: author$project$Main$Investor, salary: 0, shares: 300};
-var author$project$Main$p3 = {investedAmount: 0, name: 'P3', role: author$project$Main$Programmer, salary: 30000, shares: 0};
+var author$project$Main$p2 = {investedAmount: 150000, name: 'Vincent', role: author$project$Main$Investor, salary: 0, shares: 300};
+var author$project$Main$p3 = {investedAmount: 0, name: 'James', role: author$project$Main$Programmer, salary: 30000, shares: 0};
 var elm$core$Basics$EQ = {$: 'EQ'};
 var elm$core$Basics$LT = {$: 'LT'};
 var elm$core$Elm$JsArray$foldr = _JsArray_foldr;
@@ -5169,10 +5169,10 @@ var elm$browser$Browser$Navigation$pushUrl = _Browser_pushUrl;
 var author$project$Main$init = F3(
 	function (_n0, url, key) {
 		return _Utils_Tuple2(
-			A6(author$project$Main$Model, author$project$Main$About, key, author$project$Main$currentDeal, author$project$Main$emptyParticipant, author$project$Main$emptyParticipant, _List_Nil),
+			A6(author$project$Main$Model, author$project$Main$Negotiation, key, author$project$Main$currentDeal, author$project$Main$emptyParticipant, author$project$Main$emptyParticipant, _List_Nil),
 			A2(elm$browser$Browser$Navigation$pushUrl, key, '/dashboard'));
 	});
-var author$project$Main$Negotiation = {$: 'Negotiation'};
+var author$project$Main$About = {$: 'About'};
 var author$project$Main$Negotiation2 = {$: 'Negotiation2'};
 var author$project$Main$Payment = {$: 'Payment'};
 var elm$core$Basics$modBy = _Basics_modBy;
@@ -14135,7 +14135,11 @@ var author$project$Main$view = function (model) {
 						elm$html$Html$text('This is simply a pre-alpha/brainstorming test version of web technologies by Point Blank Logic. : www.pointblanklogic.com'),
 						A2(elm$html$Html$br, _List_Nil, _List_Nil),
 						A2(elm$html$Html$br, _List_Nil, _List_Nil),
-						elm$html$Html$text('"Feel free to send comments and feedback about this project idea if you have any.\n                  Use our contact page for that:\n                  http://www.pointblanklogic.com/contact.html'),
+						elm$html$Html$text('Feel free to send comments and feedback about this project idea if you have any.'),
+						A2(elm$html$Html$br, _List_Nil, _List_Nil),
+						elm$html$Html$text('Use our contact page for that:'),
+						A2(elm$html$Html$br, _List_Nil, _List_Nil),
+						elm$html$Html$text('http://www.pointblanklogic.com/contact.html'),
 						A2(elm$html$Html$br, _List_Nil, _List_Nil),
 						A2(elm$html$Html$br, _List_Nil, _List_Nil),
 						elm$html$Html$text('Thank you for your visit!'),
